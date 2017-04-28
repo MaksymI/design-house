@@ -6,6 +6,8 @@ app/css
 dist
 .git
 pwd.txt
+git.txt
+steps.txt
 
 
 /**/*.psd
