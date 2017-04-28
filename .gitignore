@@ -5,6 +5,7 @@ app/fonts
 app/css
 dist
 .git
+.idea
 pwd.txt
 git.txt
 steps.txt
