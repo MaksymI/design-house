@@ -1,0 +1,214 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	// background-color: $backgrnd
+
+
+.loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+
+.loader_inner
+	background-image: url("../img/lazyload.gif")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	background-color: #fff
+	height: 60px
+	width: 60px
+	margin-top: -30px
+	margin-left: -30px
+	left: 50%
+	top: 50%
+	position: absolute
+
+
+
+#content
+	padding: 0
+	background-color: $accent
+	position: relative
+	margin-left: 30px
+	margin-right: 30px
+	margin-top: 25px
+	height: auto
+
+.main_load
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: $backgrnd-load
+	z-index: 50
+	right: 0
+	top: 0
+
+.iner_main_load
+	position: fixed
+	width: 40vw
+	height: 12vw
+	margin-top: 22vh
+	margin-left: 5vw
+	text-align: left
+	font-size: 4vw
+	font-weight: bold
+	color: $accent-load
+	line-height: 100%
+
+#logo
+	position: fixed
+	right: 8vw
+	bottom: 14vh
+	img
+		width: 13,128vw
+		height: 8,33vw
+
+// #my-footer-load
+// 	position: fixed
+// 	left: 0
+// 	bottom: 0
+// 	height: 1vw
+// 	width: 100%
+// 	color: $backgrnd-load
+// 	background-color: $accent-load
+// 	padding-top: 0.9vh
+// 	padding-bottom: 4vh
+// 	z-index: 100
+// 	i
+		
+// 		margin-left: 15px
+// 		padding-top: 10px
+// 		color: $backgrnd-load
+// 		font-size: 1.6vw
+	
+// 	span
+// 		display: inline
+// 		margin: auto
+// 		padding: 10px
+// 		font-size: 1vw
+
+.services
+	position: fixed
+	width: 100%
+	height: 100%
+	z-index: 1
+	right: 0
+	top: 0
+
+.grid_row
+	display: flex
+	flex-direction: row
+	height: 99vh
+	width: 100%
+
+
+.grid_item
+	flex: 1
+	height: 100%
+	width: 100%
+	background-size: cover
+	transition: all 0.7s ease
+	text-align: left
+	>p
+		text-transform: capitalize
+		font-size: 3.6vw
+		font-weight: bold
+		color: $backgrnd-load
+		display: block
+		margin-top: 65vh
+		margin-left: 2vw
+		animation-duration: 2s
+		animation-delay: 0
+		animation-iteration-count: 12
+
+// .grid_item:hover
+// 	opacity: 0.9
+
+// .grid_item>p::after
+// 	content: super
+	
+
+.grid_item_bgc_1
+	background-image: url("../img/1_opt.jpg")
+
+.grid_item_bgc_2
+	background-image: url("../img/2_opt.jpg")
+
+.grid_item_bgc_3
+	background-image: url("../img/3_opt.jpg")
+
+
+
+
+
+#my-footer
+	position: fixed
+	left: 0
+	bottom: 0
+	height: 1vw
+	width: 100%
+	color: $backgrnd-load
+	background-color: $accent-load
+	padding-top: 0.1vh
+	padding-bottom: 4vh
+	z-index: 100
+	i
+		margin-left: 10px
+		padding-top: 10px
+		color: $backgrnd-load
+		font-size: 1.5vw
+	.fa-facebook-square
+		position: fixed
+		left: 2vw
+		bottom: 1.5vh
+		font-size: 1.5vw
+	
+	span
+		display: inline-block
+		padding-left: 2.1vw
+		font-size: 1vw
+	
+
+
+
+@import "media"
