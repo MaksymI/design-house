@@ -9,13 +9,7 @@ $(function() {
     //         };
     //     }, 850);
     // });
-    // $(".main_load").mousemove(function() {
-    //     setTimeout(function() {
-    //         if ($(".main_load").is(":visible")) {
-    //             $(".main_load").addClass("fadeOutRight animated");
-    //         }
-    //     }, 300);
-    // });
+   
 
     setTimeout(function() {
 
@@ -27,25 +21,28 @@ $(function() {
     //     $("p", this).toggleClass("shake animated");
     // });
 
-    $(".grid_item>p").mouseover(function() {
-        $(this).toggleClass("pulse animated");
+    // $(".grid_item>p").mouseover(function() {
+    //     $(this).toggleClass("pulse animated");
+    // });
+
+    /*-------menu+sandwich----------*/
+    $(".toggle_mnu, .top_mnu ul a").click(function() {
+        $(".sandwich").toggleClass("active");
     });
 
-    // $(".grid_item").mouseleave(function() {
-    //     $("p", this).removeClass("slideOutUp animated");
-    //     $("p", this).addClass("slideInDown animated");
-    // });
+     $(".top_mnu ul a").click(function() {
+        $(".top_mnu").fadeOut(600);
+    }).append("<span>");
 
-    // $(".grid_item").mouseleave(function() {
-    //     $("p", this).replaceWith("<p class='slideInDown animated'>Design House</p>");
-    // });
-    // $(".grid_item").mouseleave(function() {
-    //     setTimeout(function() {
-
-    //         $(".grid_item>p").addClass("slideInDown animated");
-
-    //     }, 200);
-    // });
+    $(".toggle_mnu").click(function() {
+        if ($(".top_mnu").is(":visible")) {
+            $(".top_mnu").fadeOut(600);
+            $(".top_mnu li a").removeClass("fadeInUp animated");
+        } else {
+            $(".top_mnu").fadeIn(600);
+             $(".top_mnu li a").addClass("fadeInUp animated");
+        };
+    });
 
 });
 

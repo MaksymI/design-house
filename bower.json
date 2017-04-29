@@ -18,8 +18,10 @@
   ],
   "dependencies": {
     "animate.css": "^3.5.2",
+    "bootstrap-grid": "^3.3.6-beta.1",
     "font-awesome": "fontawesome#^4.7.0",
     "bootstrap-grid": "^3.3.6-beta.1",
+    "css-hamburgers": "^0.8.1",
     "jquery": "1.11.0"
   },
   "devDependencies": {
