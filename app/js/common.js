@@ -9,7 +9,25 @@ $(function() {
     //         };
     //     }, 850);
     // });
-   
+
+   $('.grid_item_bgc_3').bind('mouseenter', function() {
+    var self = $(this);
+    this.iid = setInterval(function() {
+       self.toggleClass("grid_item_bgc_3_1");
+    }, 500);
+    }).bind('mouseleave', function(){
+    this.iid && clearInterval(this.iid);
+    });
+
+    // $('.grid_item_bgc_1').bind('mouseenter', function() {
+    // var self = $(this);
+    // this.iid = setInterval(function() {
+    //    self.toggleClass("grid_item_bgc_1_1");
+    // }, 500);
+    // }).bind('mouseleave', function(){
+    // this.iid && clearInterval(this.iid);
+    // });
+
 
     setTimeout(function() {
 
@@ -23,6 +41,14 @@ $(function() {
 
     // $(".grid_item>p").mouseover(function() {
     //     $(this).toggleClass("pulse animated");
+    // });
+    
+    // $(".grid_item_bgc_1").mouseover(function() {
+    //     $(".grid_item_bgc_1").toggleClass("grid_item_bgc_1_1");
+    // });
+
+    // $(".grid_item_bgc_3").mouseover(function() {
+    //     $(".grid_item_bgc_3").toggleClass("grid_item_bgc_3_1");
     // });
 
     /*-------menu+sandwich----------*/
