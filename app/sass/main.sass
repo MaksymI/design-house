@@ -220,6 +220,104 @@ body
 // 				&:hover
 // 					background-color: rgba(255,255,255,.08)
 
+// Cube code starts here
+
+figure
+  width: 270px
+  height: 270px
+  animation: rotation 35s infinite
+  -webkit-animation: rotation 35s infinite linear
+  position: relative
+  top: 28%
+  left: 52%
+  margin-top: -150px
+  margin-left: -150px
+  transform-style: preserve-3d
+  -webkit-transform-style: preserve-3d
+
+.face
+  width: 85%
+  height: 85%
+  position: absolute
+  -webkit-transform-origin: center
+  transform-origin: center
+  div
+    border: 1.5px solid #E6E6E6
+    background: #0C0C0D
+    width: 28%
+    height: 28%
+    display: inline-block
+    margin: 2%
+    padding: 2%
+    box-sizing: border-box
+    vertical-align: top
+    transition: 4s
+
+.front div:hover
+  background: red
+  transition: 0.5s
+
+.right div:hover
+  background: green
+  transition: 0.5s
+
+.left div:hover
+  background: blue
+  transition: 0.5s
+
+.top div:hover
+  background: #555
+  transition: 0.5s
+
+.bottom div:hover
+  background: yellow
+  transition: 0.5s
+
+.back div:hover
+  background: #111
+  transition: 0.5s
+
+.front
+  -webkit-transform: translate3d(0, 0, 107px)
+  transform: translate3d(0, 0, 107px)
+
+.right
+  -webkit-transform: rotateY(90deg) translate3d(0, 0, 107px)
+  transform: rotateY(90deg) translate3d(0, 0, 107px)
+
+.left
+  -webkit-transform: rotateY(-90deg) translate3d(0, 0, 107px)
+  transform: rotateY(-90deg) translate3d(0, 0, 107px)
+
+.top
+  -webkit-transform: rotateX(90deg) translate3d(0, 0, 107px)
+  transform: rotateX(90deg) translate3d(0, 0, 107px)
+
+.bottom
+  -webkit-transform: rotateX(-90deg) translate3d(0, 0, 107px)
+  transform: rotateX(-90deg) translate3d(0, 0, 107px)
+
+.back
+  -webkit-transform: rotateY(180deg) translate3d(0, 0, 107px)
+  transform: rotateY(180deg) translate3d(0, 0, 107px)
+
+@keyframes rotation
+  0%
+    transform: rotateX(-405deg) rotateY(45deg)
+
+  100%
+    transform: rotateX(-45deg) rotateY(-405deg)
+
+
+@-webkit-keyframes rotation
+  0%
+    -webkit-transform: rotateX(405deg) rotateY(45deg)
+
+  100%
+    -webkit-transform: rotateX(-45deg) rotateY(-405deg)
+
+// Cube code ends here
+
 
 .services
 	position: fixed
