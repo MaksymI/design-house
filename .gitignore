@@ -6,6 +6,8 @@ app/css
 dist
 .git
 .idea
+.xml
+.coreftp
 pwd.txt
 git.txt
 steps.txt

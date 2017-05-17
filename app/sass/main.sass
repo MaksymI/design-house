@@ -78,7 +78,7 @@ body
 	position: fixed
 	width: 100%
 	height: 100%
-	background-color: $backgrnd-load
+	background-color: $backgrnd
 	z-index: 50
 	right: 0
 	top: 0
@@ -92,7 +92,7 @@ body
 	text-align: left
 	font-size: 4vw
 	font-weight: bold
-	color: $accent-load
+	color: $right
 	line-height: 100%
 
 #logo
@@ -221,100 +221,105 @@ body
 // 					background-color: rgba(255,255,255,.08)
 
 // Cube code starts here
+$w_fig: 20vw
+$w_face: $w_fig * 0.8
+$w_div: $w_fig * 0.21
+$w_translate: $w_fig * 0.38
+
 
 figure
-  width: 270px
-  height: 270px
+  width: $w_fig
+  height: $w_fig
   animation: rotation 35s infinite
-  -webkit-animation: rotation 35s infinite linear
+  -webkit-animation: rotation 80s infinite linear
   position: relative
   top: 55%
-  left: 52%
-  margin-top: -270px
-  margin-left: -150px
+  left: 67%
+  margin-top: -19.93vw
+  margin-left: -33vh
   transform-style: preserve-3d
   -webkit-transform-style: preserve-3d
 
 .face
-  width: 85%
-  height: 85%
+  width: $w_face
+  height: $w_face
   position: absolute
   -webkit-transform-origin: center
   transform-origin: center
   div
-    border: 1.5px solid #E6E6E6
-    background: #0C0C0D
-    width: 28%
-    height: 28%
+    border: 1.5px solid $backgrnd
+    background: $rubic-bgc
+    width: $w_div
+    height: $w_div
     display: inline-block
-    margin: 2%
-    padding: 2%
+    margin: 0.7vh
+    padding: 0.2vh
     box-sizing: border-box
     vertical-align: top
     transition: 4s
 
 .front div:hover
-  background: red
+  background: $front
   transition: 0.5s
 
 .right div:hover
-  background: green
+  background: $right
   transition: 0.5s
 
 .left div:hover
-  background: blue
+  background: $left
   transition: 0.5s
 
 .top div:hover
-  background: #555
+  background: $top
   transition: 0.5s
 
 .bottom div:hover
-  background: yellow
+  background: $bottom
   transition: 0.5s
 
 .back div:hover
-  background: #111
+  background: $back
   transition: 0.5s
 
 .front
-  -webkit-transform: translate3d(0, 0, 107px)
-  transform: translate3d(0, 0, 107px)
+  -webkit-transform: translate3d(0, 0, $w_translate)
+  transform: translate3d(0, 0, $w_translate)
 
 .right
-  -webkit-transform: rotateY(90deg) translate3d(0, 0, 107px)
-  transform: rotateY(90deg) translate3d(0, 0, 107px)
+  -webkit-transform: rotateY(90deg) translate3d(0, 0, $w_translate)
+  transform: rotateY(90deg) translate3d(0, 0, $w_translate)
 
 .left
-  -webkit-transform: rotateY(-90deg) translate3d(0, 0, 107px)
-  transform: rotateY(-90deg) translate3d(0, 0, 107px)
+  -webkit-transform: rotateY(-90deg) translate3d(0, 0, $w_translate)
+  transform: rotateY(-90deg) translate3d(0, 0, $w_translate)
 
 .top
-  -webkit-transform: rotateX(90deg) translate3d(0, 0, 107px)
-  transform: rotateX(90deg) translate3d(0, 0, 107px)
+  -webkit-transform: rotateX(90deg) translate3d(0, 0, $w_translate)
+  transform: rotateX(90deg) translate3d(0, 0, $w_translate)
 
 .bottom
-  -webkit-transform: rotateX(-90deg) translate3d(0, 0, 107px)
-  transform: rotateX(-90deg) translate3d(0, 0, 107px)
+  -webkit-transform: rotateX(-90deg) translate3d(0, 0, $w_translate)
+  transform: rotateX(-90deg) translate3d(0, 0, $w_translate)
 
 .back
-  -webkit-transform: rotateY(180deg) translate3d(0, 0, 107px)
-  transform: rotateY(180deg) translate3d(0, 0, 107px)
+  -webkit-transform: rotateY(180deg) translate3d(0, 0, $w_translate)
+  transform: rotateY(180deg) translate3d(0, 0, $w_translate)
 
 @keyframes rotation
   0%
-    transform: rotateX(-405deg) rotateY(45deg)
+    transform: rotateX(-805deg) rotateY(45deg)
 
   100%
-    transform: rotateX(-45deg) rotateY(-405deg)
+    transform: rotateX(-45deg) rotateY(-805deg)
 
 
 @-webkit-keyframes rotation
   0%
-    -webkit-transform: rotateX(405deg) rotateY(45deg)
+    -webkit-transform: rotateX(805deg) rotateY(145deg)
 
   100%
-    -webkit-transform: rotateX(-45deg) rotateY(-405deg)
+    -webkit-transform: rotateX(-145deg) rotateY(-805deg)
 
 // Cube code ends here
 
@@ -349,7 +354,7 @@ figure
 		text-transform: capitalize
 		font-size: 3.6vw
 		font-weight: bold
-		color: $backgrnd-load
+		color: $backgrnd
 		display: block
 		margin-top: 70vh
 		margin-left: 3.7vw
@@ -386,13 +391,14 @@ figure
 
 .grid_item_bgc_1
 	background-image: url("../img/space1.jpeg")
-.grid_item_bgc_1_1
+.grid_item_bgc_load1_1
 	background-image: url("../img/space2.jpeg")
 
 .grid_item_bgc_2
-	background-image: url("../img/educ1.jpeg")
-.grid_item_bgc_2_1
-	background-image: url("../img/educ7.jpeg")
+	background: $backgrnd
+	// background-image: url("../img/educ1.jpeg")
+// .grid_item_bgc_2_1
+// 	background-image: url("../img/educ7.jpeg")
 
 .grid_item_bgc_3
 	background-image: url("../img/serv1.jpeg")
@@ -411,7 +417,7 @@ figure
 	height: 1vw
 	width: 100%
 	font-weight: 600
-	color: $backgrnd-load
+	color: $backgrnd
 	background-color: $accent-load
 	padding-top: 0.1vh
 	padding-bottom: 4vh
@@ -419,7 +425,7 @@ figure
 	i
 		margin-left: 0.6px
 		padding-top: 1.4vh
-		color: $backgrnd-load
+		color: $backgrnd
 		font-size: 1.5vw
 	.fa-facebook-square
 		// position: fixed

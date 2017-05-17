@@ -42,14 +42,14 @@ $(function() {
     this.iid && clearInterval(this.iid);
     });
 
-    $('.grid_item_bgc_2').bind('mouseenter', function() {
-    var self = $(this);
-    this.iid = setInterval(function() {
-       self.toggleClass("grid_item_bgc_2_1");
-    }, 500);
-    }).bind('mouseleave', function(){
-    this.iid && clearInterval(this.iid);
-    });
+    // $('.grid_item_bgc_2').bind('mouseenter', function() {
+    // var self = $(this);
+    // this.iid = setInterval(function() {
+    //    self.toggleClass("grid_item_bgc_2_1");
+    // }, 500);
+    // }).bind('mouseleave', function(){
+    // this.iid && clearInterval(this.iid);
+    // });
 
     $('.grid_item_bgc_1').bind('mouseenter', function() {
     var self = $(this);
