@@ -8,6 +8,8 @@ dist
 .idea
 .xml
 .coreftp
+.access
+*.min.js
 pwd.txt
 git.txt
 steps.txt
