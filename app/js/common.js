@@ -66,7 +66,9 @@ $(function() {
 
             $(".main_load").addClass("fadeOutRight animated");
 
-        }, 4000);
+        }, 4500);
+
+
    
     // $(".grid_item").mouseover(function() {
     //     $("p", this).toggleClass("shake animated");

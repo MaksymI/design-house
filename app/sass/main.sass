@@ -37,8 +37,8 @@ body
 	overflow-x: hidden
 	opacity: 1
 	// background-color: $backgrnd
-
-
+a
+	text-decoration: none	
 .loader
 	background: none repeat scroll 0 0 #ffffff
 	bottom: 0
@@ -50,7 +50,7 @@ body
 	z-index: 9999
 
 .loader_inner
-	background-image: url("../img/lazyload.gif")
+	background-image: url("../img/preloader.gif")
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center center
@@ -92,7 +92,7 @@ body
 	text-align: left
 	font-size: 4vw
 	font-weight: bold
-	color: $right
+	color: $accent
 	line-height: 100%
 
 #logo
@@ -100,8 +100,8 @@ body
 	right: 8vw
 	bottom: 14vh
 	img
-		width: 13,128vw
-		height: 8,33vw
+		width: 15.2vw
+		height: 10.4vw
 
 /*--------- menu start -------------*/
 
@@ -230,90 +230,85 @@ $div_padding: $div_margin * 0.3
 
 
 figure
-  width: $w_fig
-  height: $w_fig
-  animation: rotation 35s infinite
-  -webkit-animation: rotation 180s infinite linear
-  position: relative
-  top: 55%
-  left: 67%
-  margin-top: -19.93vw
-  margin-left: -17vw
-  transform-style: preserve-3d
-  -webkit-transform-style: preserve-3d
+	width: $w_fig
+	height: $w_fig
+	-webkit-animation: rotation 180s infinite linear
+	animation: rotation 180s infinite linear
+	position: relative
+	top: 55%
+	left: 67%
+	margin-top: -19.93vw
+	margin-left: -17vw
+	-webkit-transform-style: preserve-3d
+	transform-style: preserve-3d
+	
 
 .face
-  width: $w_face
-  height: $w_face
-  position: absolute
-  -webkit-transform-origin: center
-  transform-origin: center
-  div
-    border: 1.5px solid $backgrnd
-    background: $rubic-bgc
-    width: $w_div
-    height: $w_div
-    display: inline-block
-    margin: $div_margin
-    padding: $div_padding
-    box-sizing: border-box
-    vertical-align: top
-    transition: 4s
+	width: $w_face
+	height: $w_face
+	position: absolute
+	-webkit-transform-origin: center
+	transform-origin: center
+	div
+		border: 1.5px solid $backgrnd
+		background: $rubic-bgc
+		width: $w_div
+		height: $w_div
+		display: inline-block
+		margin: $div_margin
+		padding: $div_padding
+		box-sizing: border-box
+		vertical-align: top
+		transition: 4s
 
 .front div:hover
-  background: $front
-  transition: 0.5s
+	background: $accent
+	transition: 0.5s
 
 .right div:hover
-  background: $right
-  transition: 0.5s
+	background: $accent
+	transition: 0.5s
 
 .left div:hover
-  background: $left
-  transition: 0.5s
+	background: $accent
+	transition: 0.5s
 
 .top div:hover
-  background: $top
-  transition: 0.5s
+	background: $accent
+	transition: 0.5s
 
 .bottom div:hover
-  background: $bottom
-  transition: 0.5s
+	background: $accent
+	transition: 0.5s
 
 .back div:hover
-  background: $back
-  transition: 0.5s
+	background: $accent
+	transition: 0.5s
 
 .front
-  -webkit-transform: translate3d(0, 0, $w_translate)
-  transform: translate3d(0, 0, $w_translate)
+	-webkit-transform: translate3d(0, 0, $w_translate)
+	transform: translate3d(0, 0, $w_translate)
 
 .right
-  -webkit-transform: rotateY(90deg) translate3d(0, 0, $w_translate)
-  transform: rotateY(90deg) translate3d(0, 0, $w_translate)
+	-webkit-transform: rotateY(90deg) translate3d(0, 0, $w_translate)
+	transform: rotateY(90deg) translate3d(0, 0, $w_translate)
 
 .left
-  -webkit-transform: rotateY(-90deg) translate3d(0, 0, $w_translate)
-  transform: rotateY(-90deg) translate3d(0, 0, $w_translate)
+	-webkit-transform: rotateY(-90deg) translate3d(0, 0, $w_translate)
+	transform: rotateY(-90deg) translate3d(0, 0, $w_translate)
 
 .top
-  -webkit-transform: rotateX(90deg) translate3d(0, 0, $w_translate)
-  transform: rotateX(90deg) translate3d(0, 0, $w_translate)
+	-webkit-transform: rotateX(90deg) translate3d(0, 0, $w_translate)
+	transform: rotateX(90deg) translate3d(0, 0, $w_translate)
 
 .bottom
-  -webkit-transform: rotateX(-90deg) translate3d(0, 0, $w_translate)
-  transform: rotateX(-90deg) translate3d(0, 0, $w_translate)
+	-webkit-transform: rotateX(-90deg) translate3d(0, 0, $w_translate)
+	transform: rotateX(-90deg) translate3d(0, 0, $w_translate)
 
 .back
-  -webkit-transform: rotateY(180deg) translate3d(0, 0, $w_translate)
-  transform: rotateY(180deg) translate3d(0, 0, $w_translate)
+	-webkit-transform: rotateY(180deg) translate3d(0, 0, $w_translate)
+	transform: rotateY(180deg) translate3d(0, 0, $w_translate)
 
-@keyframes rotation
-  0%
-    transform: rotateX(-1805deg) rotateY(845deg)
-
-  100%
-    transform: rotateX(-845deg) rotateY(-1805deg)
 
 
 @-webkit-keyframes rotation
@@ -322,6 +317,14 @@ figure
 
   100%
     -webkit-transform: rotateX(-845deg) rotateY(-1805deg)
+
+@keyframes rotation
+  0%
+    transform: rotateX(-1805deg) rotateY(845deg)
+
+  100%
+    transform: rotateX(-845deg) rotateY(-1805deg)
+
 
 // Cube code ends here
 
@@ -395,7 +398,7 @@ figure
 	background-size: cover
 
 .grid_item_bgc_2
-	background: $backgrnd
+	background: $accent
 	// background-image: url("../img/educ1.jpeg")
 // .grid_item_bgc_2_1
 // 	background-image: url("../img/educ7.jpeg")
